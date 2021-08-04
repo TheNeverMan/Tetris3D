@@ -37,23 +37,24 @@ public class blockGenerator : MonoBehaviour
         blockRenderer.material.SetColor("_Color", kolor);
     }
 
-    void generateBlock(Vector3 startVec3, int blocksNumber = 0)
+    void generateBlock(Vector3 startPos, int blocksNumber = 0)
     {
         if (blocksNumber == 0) blocksNumber = Random.Range(2, 6);
 
         Color blockColor = randomColor();
 
         GameObject block1 = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        block1.transform.position = startVec3;
+        block1.transform.position = startPos;
 
         changeBlockColor(block1, blockColor);
 
         if (blocksNumber >= 2)
         {
-            Vector3 block2Pos = nextBlock(startVec3);
+            Vector3 block2Pos = nextBlock(startPos);
 
             GameObject block2 = GameObject.CreatePrimitive(PrimitiveType.Cube);
             block2.transform.position = block2Pos;
+            block2.transform.SetParent(block1.transform);
 
             changeBlockColor(block2, blockColor);
 
@@ -61,11 +62,12 @@ public class blockGenerator : MonoBehaviour
             {
                 Vector3 block3Pos = block2Pos;
 
-                while (block3Pos == block2Pos || block3Pos == startVec3)
+                while (block3Pos == block2Pos || block3Pos == startPos)
                     block3Pos = nextBlock(block2Pos);
 
                 GameObject block3 = GameObject.CreatePrimitive(PrimitiveType.Cube);
                 block3.transform.position = block3Pos;
+                block3.transform.SetParent(block1.transform);
 
                 changeBlockColor(block3, blockColor);
 
@@ -73,11 +75,12 @@ public class blockGenerator : MonoBehaviour
                 {
                     Vector3 block4Pos = block3Pos;
 
-                    while (block4Pos == block3Pos || block4Pos == block2Pos || block4Pos == startVec3)
+                    while (block4Pos == block3Pos || block4Pos == block2Pos || block4Pos == startPos)
                         block4Pos = nextBlock(block3Pos);
 
                     GameObject block4 = GameObject.CreatePrimitive(PrimitiveType.Cube);
                     block4.transform.position = block4Pos;
+                    block4.transform.SetParent(block1.transform);
 
                     changeBlockColor(block4, blockColor);
 
@@ -85,24 +88,37 @@ public class blockGenerator : MonoBehaviour
                     {
                         Vector3 block5Pos = block3Pos;
 
-                        while (block5Pos == block4Pos || block5Pos == block3Pos || block5Pos == block2Pos || block5Pos == startVec3)
+                        while (block5Pos == block4Pos || block5Pos == block3Pos || block5Pos == block2Pos || block5Pos == startPos)
                             block5Pos = nextBlock(block4Pos);
 
                         GameObject block5 = GameObject.CreatePrimitive(PrimitiveType.Cube);
                         block5.transform.position = block5Pos;
+                        block5.transform.SetParent(block1.transform);
 
                         changeBlockColor(block5, blockColor);
                     }
                 }
             }
         }
+        Rigidbody block1RigidBody = block1.AddComponent<Rigidbody>();
+        block1RigidBody.velocity = new Vector3(0, 10, 0);
+        block1RigidBody.mass = 1;
     }
 
     void Start()
     {
+        /*
         for (int i = 1; i < 50; i++)
             for(int j = 1; j < 5; j++)
                 generateBlock(new Vector3(i * 6, j * 5, 0), j + 1);
+        */
 
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+            generateBlock(new Vector3(25, 30, 25));
+        
     }
 }
