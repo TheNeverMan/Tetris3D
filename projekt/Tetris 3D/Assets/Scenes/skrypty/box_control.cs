@@ -1,105 +1,100 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// do block1 w skrypcie do generowania blocków (nie dodawać nigdzie)
+
 public class box_control : MonoBehaviour
 {
-private bool canmove = true;
-public static bool spawnmore = false;
-Rigidbody rb ;
-private bool ifdead = false;
+    KeyCode rotationYKey = KeyCode.E;
+    KeyCode rotationXKey = KeyCode.Q;
+    KeyCode rotationRevKey = KeyCode.LeftShift;
+    KeyCode downDashKey = KeyCode.Space;
+
+    public float wsadSensivity = 10f;
+
+    private bool canMove = true;
+    public static bool spawnMore = false;
+    Rigidbody rb;
+    private bool ifDead = false;
     public GameObject otherGameObject;
-  void OnCollisionEnter(Collision col)
-  {
-    rb.drag=0;
-    canmove=false;
-    if(!ifdead)
-    spawnmore=true;
-    ifdead=true;
-  //  Debug.Log("collsion 12");
-  }
-  void Awake()
-  {
-            rb = GetComponent<Rigidbody>();
-            canmove = true;
-            spawnmore = false;
-          ifdead = false;
+    Vector3 euler;
 
-  }
-
-    // Start is called before the first frame update
-    void Start()
+    void OnCollisionEnter(Collision col)
     {
+        if (!ifDead)
+            spawnMore = true;
 
+        canMove = false;
+        ifDead = true;
+        rb.drag = 0;
+    }
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+        canMove = true;
+        spawnMore = false;
+        ifDead = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-      if(canmove)
-      {
-        if(Input.GetKey(KeyCode.Space))
+        if (canMove)
         {
-          rb.drag = -1 ;
-          canmove = false;
+            if (Input.GetKeyDown(downDashKey))
+            {
+                rb.drag = -1;
+                rb.mass = 1;
+                Debug.Log(rb.velocity.y);
+                rb.velocity = new Vector3(0, rb.velocity.y * 0.001f, 0);
+
+                canMove = false;
+            }
+            if (canMove == true)
+            {
+                float horIn = Input.GetAxis("Horizontal");
+                float verIn = Input.GetAxis("Vertical");
+
+                if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
+                {
+                    rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, verIn * wsadSensivity);
+                }
+                if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+                {
+                    rb.velocity = new Vector3(horIn * wsadSensivity, rb.velocity.y, rb.velocity.z);
+                }
+                if (Input.GetKey(rotationXKey))
+                {
+                    euler = transform.rotation.eulerAngles;
+
+                    if (Input.GetKey(rotationRevKey))
+                    {
+                        euler.x -= 2;
+                    }
+                    else //if (!Input.GetKey(rotationRevKey))
+                    {
+                        if (euler.x < 0)
+                            euler.x -= 2;
+                        else
+                            euler.x += 2;
+                    }
+                    Debug.Log(euler.x);
+
+                    transform.localRotation = Quaternion.Euler(euler);
+                }
+                if (Input.GetKey(rotationYKey))
+                {
+                    euler = transform.rotation.eulerAngles;
+
+                    if (Input.GetKey(rotationRevKey))
+                    {
+                        euler.y -= 2;
+                    }
+                    else //if (Input.GetKey(rotationRevKey))
+                    {
+                        euler.y += 2;
+                    }
+                    transform.localRotation = Quaternion.Euler(euler);
+                }
+            }
         }
-float horIn = Input.GetAxis("Horizontal");
-float verIn = Input.GetAxis("Vertical");
-if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
-{
-//  Debug.Log("WS " + horIn);
-  rb.velocity= new Vector3(rb.velocity.x,rb.velocity.y,verIn*10f);
-
-}
-      if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
-      {
-      //  Debug.Log("AD " + horIn);
-        rb.velocity= new Vector3(horIn*10f,rb.velocity.y,rb.velocity.z);
-
-      }
-      /*if(Input.GetKey(KeyCode.D))
-      {
-        Debug.Log("D");
-        rb.velocity= new Vector3(horIn*10f,rb.velocity.y,rb.velocity.z);
-
-      // }*/
-      if(Input.GetKey(KeyCode.Q) && !Input.GetKey(KeyCode.CapsLock))
-      {
-        Vector3 euler = transform.rotation.eulerAngles;
-        euler.y += 2;
-        euler.x += 0;
-        euler.x = Mathf.Clamp(euler.x, 0f, 360f);
-        transform.localRotation = Quaternion.Euler(euler);
-
-      }
-      if(Input.GetKey(KeyCode.E) && !Input.GetKey(KeyCode.CapsLock))
-      {
-        Vector3 euler = transform.rotation.eulerAngles;
-        euler.y -= 2;
-        euler.x += 0;
-        euler.x = Mathf.Clamp(euler.x, 0f, 360f);
-        transform.localRotation = Quaternion.Euler(euler);
-
-      }
-      if(Input.GetKey(KeyCode.Q) && Input.GetKey(KeyCode.CapsLock))
-      {
-        Vector3 euler = transform.rotation.eulerAngles;
-        euler.y += 0;
-        euler.x += 2;
-        euler.x = Mathf.Clamp(euler.x, 0f, 360f);
-        transform.localRotation = Quaternion.Euler(euler);
-
-      }
-      if(Input.GetKey(KeyCode.E) && Input.GetKey(KeyCode.CapsLock))
-      {
-        Vector3 euler = transform.rotation.eulerAngles;
-        euler.y += 0;
-        euler.x -= 2;
-        euler.x = Mathf.Clamp(euler.x, 0f, 360f);
-        transform.localRotation = Quaternion.Euler(euler);
-
-      }
-      }
-
-}
+    }
 }
