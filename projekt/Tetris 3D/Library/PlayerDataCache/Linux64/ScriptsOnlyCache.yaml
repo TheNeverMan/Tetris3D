@@ -8,7 +8,6 @@ ScriptsOnlyBuild:
     - kamera_move
     - score
     - score_text
-    - test
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -22,7 +21,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/main.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -41,8 +40,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 54
-      Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
     - Class: 65
@@ -56,31 +53,31 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1862}
+      Script: {instanceID: 1866}
     - Class: 114
-      Script: {instanceID: 1960}
+      Script: {instanceID: 1964}
     - Class: 114
-      Script: {instanceID: 2238}
+      Script: {instanceID: 2240}
     - Class: 114
-      Script: {instanceID: 2340}
+      Script: {instanceID: 2342}
     - Class: 114
-      Script: {instanceID: 2370}
+      Script: {instanceID: 2372}
     - Class: 114
-      Script: {instanceID: 2488}
+      Script: {instanceID: 2490}
     - Class: 114
-      Script: {instanceID: 2670}
+      Script: {instanceID: 2672}
     - Class: 114
-      Script: {instanceID: 3358}
+      Script: {instanceID: 2998}
+    - Class: 114
+      Script: {instanceID: 3360}
     - Class: 114
       Script: {instanceID: 3620}
     - Class: 114
-      Script: {instanceID: 3830}
+      Script: {instanceID: 3764}
     - Class: 114
       Script: {instanceID: 3986}
     - Class: 114
-      Script: {instanceID: 193088}
-    - Class: 114
-      Script: {instanceID: 1038782}
+      Script: {instanceID: 15846}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -200,12 +197,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
     className: PlaymodeTestsController
-  - hash:
-      serializedVersion: 2
-      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: player
   - hash:
       serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
@@ -376,6 +367,12 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 725868a2e110bd11b0dfdbeb9a17563a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: score_text
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -446,12 +443,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationTrack
-  - hash:
-      serializedVersion: 2
-      Hash: a3e269357b2bf6e91c7fd08d29d03a90
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: movement
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -526,16 +517,16 @@ ScriptsOnlyBuild:
     className: TMP_Settings
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: endgame
+  - hash:
+      serializedVersion: 2
       Hash: 6980e81ddc615a861309d2d659cc3760
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: test
   - hash:
       serializedVersion: 2
       Hash: fd68d84f33fad85aac38f2739c0ee270
@@ -578,19 +569,7 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
-  - hash:
-      serializedVersion: 2
-      Hash: 725868a2e110bd11b0dfdbeb9a17563a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: score_text
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: endgame
   platform: 24
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
-  playerPath: /home/leopoldkucinski/Dokumenty/Tetris3D/Tetris3d 0.1.x86_64
+  - Assets/Scenes/main.unity
+  playerPath: /home/leopoldkucinski/Dokumenty/Tetris3D/Tetris3d 1.0.x86_64

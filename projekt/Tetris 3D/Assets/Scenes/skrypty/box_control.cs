@@ -11,7 +11,7 @@ private bool ifdead = false;
     public GameObject otherGameObject;
   void OnCollisionEnter(Collision col)
   {
-    rb.drag=1;
+    rb.drag=0;
     canmove=false;
     if(!ifdead)
     spawnmore=true;
@@ -66,7 +66,7 @@ if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
       if(Input.GetKey(KeyCode.Q) && !Input.GetKey(KeyCode.CapsLock))
       {
         Vector3 euler = transform.rotation.eulerAngles;
-        euler.y += 4;
+        euler.y += 2;
         euler.x += 0;
         euler.x = Mathf.Clamp(euler.x, 0f, 360f);
         transform.localRotation = Quaternion.Euler(euler);
@@ -75,7 +75,7 @@ if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
       if(Input.GetKey(KeyCode.E) && !Input.GetKey(KeyCode.CapsLock))
       {
         Vector3 euler = transform.rotation.eulerAngles;
-        euler.y -= 4;
+        euler.y -= 2;
         euler.x += 0;
         euler.x = Mathf.Clamp(euler.x, 0f, 360f);
         transform.localRotation = Quaternion.Euler(euler);
@@ -85,7 +85,7 @@ if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
       {
         Vector3 euler = transform.rotation.eulerAngles;
         euler.y += 0;
-        euler.x += 4;
+        euler.x += 2;
         euler.x = Mathf.Clamp(euler.x, 0f, 360f);
         transform.localRotation = Quaternion.Euler(euler);
 
@@ -94,7 +94,7 @@ if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
       {
         Vector3 euler = transform.rotation.eulerAngles;
         euler.y += 0;
-        euler.x -= 4;
+        euler.x -= 2;
         euler.x = Mathf.Clamp(euler.x, 0f, 360f);
         transform.localRotation = Quaternion.Euler(euler);
 
