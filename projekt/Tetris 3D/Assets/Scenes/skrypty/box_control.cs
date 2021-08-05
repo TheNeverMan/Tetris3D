@@ -43,7 +43,7 @@ public class box_control : MonoBehaviour
             {
                 rb.drag = -1;
                 rb.mass = 1;
-                Debug.Log(rb.velocity.y);
+
                 rb.velocity = new Vector3(0, rb.velocity.y * 0.001f, 0);
 
                 canMove = false;
