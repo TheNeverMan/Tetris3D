@@ -2,31 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-//do UI
-public class score_text : MonoBehaviour
-{
-      public Text score_field;
-      private GameObject new_object;
-    // Start is called before the first frame update
-    void Awake()
-    {
-      new_object = new GameObject();
-    //  score_field = new_object.GetComponent<Text>();
-    }
 
-    // Update is called once per frame
+public class score_text : MonoBehaviour // do UI
+{
+    public Text scoreField;
+
     void Update()
     {
-      int score_int = (int)score.score_count;
-      if(score.endgame)
-      {
-        score_field.text = "YOU HAVE LOST SCORE: " + score_int;
+        int scoreCountInt = (int)score.scoreCount;
 
+        if (score.endGame)
+        {
+            scoreField.text = "YOU HAVE LOST SCORE: " + scoreCountInt;
+        }
+        else
+        {
+            scoreField.text = "SCORE: " + scoreCountInt;
+        }
     }
-    else
-    {
-      score_field.text = "SCORE: " + score_int;
-
-    }
-  }
 }

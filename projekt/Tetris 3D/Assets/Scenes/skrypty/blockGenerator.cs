@@ -5,7 +5,10 @@ using static UnityEngine.Random;
 //do studni
 public class blockGenerator : MonoBehaviour
 {
-  private List<GameObject> list_of_cubes = new List<GameObject>();
+    private List<GameObject> list_of_cubes = new List<GameObject>();
+    public KeyCode restartKey = KeyCode.R;
+    float time = 0;
+    private bool oneTime = true;
     Color randomColor()
     {
         int kolor = Random.Range(0, 6);
@@ -40,8 +43,6 @@ public class blockGenerator : MonoBehaviour
 
     void generateBlock(Vector3 startPos, int blocksNumber = 0)
     {
-      if(!score.endgame)
-      {
         if (blocksNumber == 0) blocksNumber = Random.Range(2, 6);
 
         Color blockColor = randomColor();
@@ -51,14 +52,9 @@ public class blockGenerator : MonoBehaviour
         Rigidbody block1RigidBody = block1.AddComponent<Rigidbody>();
         box_control BoxControl = block1.AddComponent<box_control>();
         box_move BoxMove = block1.AddComponent<box_move>();
-      //  Debug.Log("Spawn");
-        //block1RigidBody.velocity = new Vector3(0, 10, 0);
-        block1RigidBody.mass = 10;
-        block1RigidBody.drag =1.5f;
-        //block1.transform.Scale;
-        //block1.transform.scale.x=2;
-        //block1.transform.scale.y=2;
-        //block1.transform.scale.z=2;
+
+        block1RigidBody.mass = 20;
+        block1RigidBody.drag = 3.0f;
 
         changeBlockColor(block1, blockColor);
 
@@ -114,57 +110,41 @@ public class blockGenerator : MonoBehaviour
                 }
             }
         }
-        block1.transform.localScale= new Vector3(2f,2f,2f);
+        block1.transform.localScale = new Vector3(2f, 2f, 2f);
         list_of_cubes.Add(block1);
-      }
     }
-float time = 0;
     void Start()
     {
-      generateBlock(new Vector3(0, 45, 0));
-
-        /*
-        for (int i = 1; i < 50; i++)
-            for(int j = 1; j < 5; j++)
-                generateBlock(new Vector3(i * 6, j * 5, 0), j + 1);
-        */
-
+        generateBlock(new Vector3(0, 45, 0));
     }
-private bool onetime = true;
+
     void Update()
     {
-      if(score.endgame && onetime)
-      {
-        onetime=false;
-        Destroy(list_of_cubes[list_of_cubes.Count-1]);
-      }
-      if(Input.GetKeyDown(KeyCode.R))
-      {
-        //Debug.Log("reset");
-        //if(score.endgame)
-        //{
-        foreach(GameObject obj in list_of_cubes)
+        if (score.endGame && oneTime)
         {
-          Destroy(obj);
+            oneTime = false;
+            Destroy(list_of_cubes[list_of_cubes.Count - 1]);
         }
-        score.score_count=0;
-        generateBlock(new Vector3(0, 45, 0));
-        score.endgame=false;
-      //}
+        if (Input.GetKeyDown(restartKey))
+        {
+            foreach (GameObject obj in list_of_cubes)
+            {
+                Destroy(obj);
+            }
+            score.scoreCount = 0;
+            score.endGame = false;
 
-      }
-      //Debug.Log(//box_control.canmove);
-    //  Debug.Log(time);
-      time = time +1 * Time.deltaTime;
-      if(box_control.spawnmore && time%2<0.1)
-      generateBlock(new Vector3(0, 45, 0));
-      //if (Input.GetKeyDown(KeyCode.C))//!box_control.canmove && time%10<0.5)
-      //  generateBlock(new Vector3(0, 45, 0));
+            generateBlock(new Vector3(0, 45, 0));
+        }
+
+        time = time + 1 * Time.deltaTime;
+
+        if (box_control.spawnMore && time % 2 < 0.1 && !score.endGame)
+            generateBlock(new Vector3(0, 45, 0));
     }
     void OnCollisionEnter(Collision col)
     {
-    //  Debug.Log("Col");
-      if(box_control.spawnmore && time%2<0.1)
-      generateBlock(new Vector3(0, 45, 0));
+        if (box_control.spawnMore && time % 2 < 0.1)
+            generateBlock(new Vector3(0, 45, 0));
     }
 }
