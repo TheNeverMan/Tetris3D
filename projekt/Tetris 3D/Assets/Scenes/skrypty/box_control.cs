@@ -67,14 +67,14 @@ public class box_control : MonoBehaviour
 
                     if (Input.GetKey(rotationRevKey))
                     {
-                        euler.x -= 2;
+                        euler.x -= 0.5f;
                     }
                     else //if (!Input.GetKey(rotationRevKey))
                     {
                         if (euler.x < 0)
-                            euler.x -= 2;
+                            euler.x -= 0.5f;
                         else
-                            euler.x += 2;
+                            euler.x += 0.5f;
                     }
                     Debug.Log(euler.x);
 
@@ -86,11 +86,11 @@ public class box_control : MonoBehaviour
 
                     if (Input.GetKey(rotationRevKey))
                     {
-                        euler.y -= 2;
+                        euler.y -= 0.5f;
                     }
                     else //if (Input.GetKey(rotationRevKey))
                     {
-                        euler.y += 2;
+                        euler.y += 0.5f;
                     }
                     transform.localRotation = Quaternion.Euler(euler);
                 }
