@@ -24,6 +24,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.RawImage
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/main.unity:
@@ -51,40 +52,42 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2052}
+      Script: {instanceID: 1694}
     - Class: 114
-      Script: {instanceID: 2152}
+      Script: {instanceID: 1962}
     - Class: 114
-      Script: {instanceID: 2430}
+      Script: {instanceID: 2062}
     - Class: 114
-      Script: {instanceID: 2532}
+      Script: {instanceID: 2340}
     - Class: 114
-      Script: {instanceID: 2562}
+      Script: {instanceID: 2442}
     - Class: 114
-      Script: {instanceID: 2682}
+      Script: {instanceID: 2474}
     - Class: 114
-      Script: {instanceID: 2864}
+      Script: {instanceID: 2594}
     - Class: 114
-      Script: {instanceID: 3190}
+      Script: {instanceID: 2776}
     - Class: 114
-      Script: {instanceID: 3560}
+      Script: {instanceID: 3102}
     - Class: 114
-      Script: {instanceID: 3822}
+      Script: {instanceID: 3474}
     - Class: 114
-      Script: {instanceID: 3964}
+      Script: {instanceID: 3736}
     - Class: 114
-      Script: {instanceID: 4186}
+      Script: {instanceID: 3880}
     - Class: 114
-      Script: {instanceID: 4280}
+      Script: {instanceID: 4102}
     - Class: 114
-      Script: {instanceID: 29054}
+      Script: {instanceID: 4196}
     - Class: 114
-      Script: {instanceID: 94406}
+      Script: {instanceID: 26850}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -116,28 +119,28 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1666}
+      Script: {instanceID: 1574}
     - Class: 114
-      Script: {instanceID: 2152}
+      Script: {instanceID: 2062}
     - Class: 114
-      Script: {instanceID: 2430}
+      Script: {instanceID: 2180}
     - Class: 114
-      Script: {instanceID: 2532}
+      Script: {instanceID: 2340}
     - Class: 114
-      Script: {instanceID: 2682}
+      Script: {instanceID: 2442}
     - Class: 114
-      Script: {instanceID: 2864}
+      Script: {instanceID: 2468}
     - Class: 114
-      Script: {instanceID: 2942}
+      Script: {instanceID: 2594}
     - Class: 114
-      Script: {instanceID: 57034}
+      Script: {instanceID: 2776}
+    - Class: 114
+      Script: {instanceID: 2854}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -155,12 +158,6 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UIElements
-    className: PanelRaycaster
   - hash:
       serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
@@ -205,6 +202,12 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: mainScript
+  - hash:
+      serializedVersion: 2
       Hash: 21a9c6dbf300fc1f6dc15ca7e2c39a37
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -233,12 +236,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: box_control
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UIElements
-    className: PanelEventHandler
   - hash:
       serializedVersion: 2
       Hash: 83705381e75353a6a85b7a3cbad5b3eb
@@ -313,6 +310,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MenuScript
+  - hash:
+      serializedVersion: 2
       Hash: cf27e8b2eaaab6c273a05b78d15b36fd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -349,7 +352,7 @@ ScriptsOnlyBuild:
     className: TMP_SelectionCaret
   - hash:
       serializedVersion: 2
-      Hash: 34746f5ad4a8189141ddf65a40069ea1
+      Hash: a306e12d896ddcca949923c805691027
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: InputField
@@ -457,13 +460,19 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: audio
+  - hash:
+      serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 27ec3360f0c0a6803ba71cc3106480b8
+      Hash: da4cc51a02ce84afe2cecd27cfe6997a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshPro
@@ -647,20 +656,8 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MenuScript
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: mainScript
   platform: 19
   scenePathNames:
   - Assets/Scenes/manu.unity
   - Assets/Scenes/main.unity
-  playerPath: C:/Users/Bruno/Desktop/Tetris 3D.exe
+  playerPath: C:/Users/moolm/OneDrive/Pulpit/game saves/Tetris 3D.exe
