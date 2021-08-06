@@ -7868,6 +7868,7 @@ Transform:
   - {fileID: 1850225062}
   - {fileID: 172559572}
   - {fileID: 713673395}
+  - {fileID: 543450652654287117}
   - {fileID: 55667166}
   - {fileID: 1336754170}
   - {fileID: 1674374711}
@@ -7884,7 +7885,6 @@ Transform:
   - {fileID: 1359395442}
   - {fileID: 472520049}
   - {fileID: 1088759020}
-  - {fileID: 543450652654287117}
   - {fileID: 958788079}
   - {fileID: 666007986}
   - {fileID: 1292771369}
@@ -15535,6 +15535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1946359726}
   - component: {fileID: 1946359725}
+  - component: {fileID: 1946359727}
   m_Layer: 0
   m_Name: "Zarz\u0105dzanie main"
   m_TagString: Untagged
@@ -15568,6 +15569,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1946359727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946359724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61350585f07db08488c8dd6288e09f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  studnia: {fileID: 8315521178759032546}
 --- !u!1001 &1957449519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17521,7 +17535,7 @@ Transform:
   - {fileID: 4582063438093511753}
   - {fileID: 8893063631800110949}
   m_Father: {fileID: 1131722814}
-  m_RootOrder: 24
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &543450652690360626
 Transform:

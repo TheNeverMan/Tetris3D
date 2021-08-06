@@ -6,6 +6,7 @@ using static UnityEngine.Random;
 public class blockGenerator : MonoBehaviour
 {
     private List<GameObject> list_of_cubes = new List<GameObject>();
+    private int whereSpawn = 45;
     public KeyCode restartKey = KeyCode.R;
     Vector3 blockSpawnPoint = new Vector3(0f, 0f, 0f);
     private float blockScale = 1.8f;
@@ -176,11 +177,36 @@ public class blockGenerator : MonoBehaviour
 
     void Start()
     {
-        generateBlock(new Vector3(0, 45, 0));
+        generateBlock(new Vector3(0, whereSpawn, 0));
     }
 
     void Update()
     {
+      int highest = 0;
+      if(list_of_cubes.Count > 1)
+      {
+       try {
+      for(int j = 0;j < list_of_cubes.Count;j++)
+      {
+
+        if(j==list_of_cubes.Count-1)
+        {
+          continue;
+        }
+        if(highest<list_of_cubes[j].transform.position.y)
+        {
+          highest = j;
+        }
+      }
+    }
+    catch
+    {
+      Debug.Log("exc");
+      highest = 0;
+    }
+    }
+      whereSpawn = highest+40;
+      Debug.Log(whereSpawn);
       if(!score.endGame)
       {
         int i = list_of_cubes.Count;
@@ -197,20 +223,21 @@ public class blockGenerator : MonoBehaviour
             {
                 Destroy(obj);
             }
+            list_of_cubes.Clear();
             score.scoreCount = 0;
             score.endGame = false;
 
-            generateBlock(new Vector3(0, 45, 0));
+            generateBlock(new Vector3(0, whereSpawn, 0));
         }
 
         time = time + 1 * Time.deltaTime;
 
         if (box_control.spawnMore && time % 2 < 0.1 && !score.endGame)
-            generateBlock(new Vector3(0, 45, 0));
+            generateBlock(new Vector3(0, whereSpawn, 0));
     }
     void OnCollisionEnter(Collision col)
     {
         if (box_control.spawnMore && time % 2 < 0.1)
-            generateBlock(new Vector3(0, 45, 0));
+            generateBlock(new Vector3(0, whereSpawn, 0));
     }
 }
