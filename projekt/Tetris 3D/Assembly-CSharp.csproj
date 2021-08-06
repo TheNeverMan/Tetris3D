@@ -59,18 +59,19 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scenes\skrypty\mainScript.cs" />
     <Compile Include="Assets\Scenes\skrypty\box_control.cs" />
     <Compile Include="Assets\Scenes\skrypty\kamera.cs" />
+    <Compile Include="Assets\Scenes\skrypty\MenuScript.cs" />
     <Compile Include="Assets\Scenes\skrypty\blockGenerator.cs" />
     <Compile Include="Assets\Scenes\skrypty\box_move.cs" />
     <Compile Include="Assets\Scenes\skrypty\score_text.cs" />
+    <Compile Include="Assets\Scenes\skrypty\audio.cs" />
     <Compile Include="Assets\Scenes\skrypty\kamera_move.cs" />
     <Compile Include="Assets\Scenes\skrypty\score.cs" />
     <Compile Include="Assets\Scenes\skrypty\endgame.cs" />
     <Compile Include="Assets\Scenes\skrypty\centrym.cs" />
     <Compile Include="Assets\Scenes\skrypty\pauza.cs" />
-    <Compile Include="Assets\Scenes\skrypty\MenuScript.cs" />
-    <Compile Include="Assets\Scenes\skrypty\mainScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
