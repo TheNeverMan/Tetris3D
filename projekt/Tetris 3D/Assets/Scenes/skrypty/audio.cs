@@ -21,7 +21,7 @@ public class audio : MonoBehaviour
     void OnCollisionEnter(Collision col)
     {
       if_played = true;
-      if(time % 2 < 1)
+      if(time % 2 < 0.5)
       {
         audio_source.Play();
         if_played = false;
