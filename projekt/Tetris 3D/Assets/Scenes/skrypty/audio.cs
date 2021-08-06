@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class audio : MonoBehaviour
 {
+  bool if_played = false;
   AudioSource audio_source;
+  float time = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,10 +16,15 @@ public class audio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+      time = time + 1 * Time.deltaTime;
     }
     void OnCollisionEnter(Collision col)
     {
-      audio_source.Play();
+      if_played = true;
+      if(time % 2 < 1)
+      {
+        audio_source.Play();
+        if_played = false;
+      }
     }
 }
