@@ -15,6 +15,6 @@ public class score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!endGame) scoreCount = scoreCount + 1 * Time.deltaTime;
+        //if (!endGame) scoreCount = scoreCount + 1 * Time.deltaTime;
     }
 }

@@ -59,35 +59,35 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1694}
+      Script: {instanceID: 1664}
     - Class: 114
-      Script: {instanceID: 1962}
+      Script: {instanceID: 1932}
     - Class: 114
-      Script: {instanceID: 2062}
+      Script: {instanceID: 2032}
     - Class: 114
-      Script: {instanceID: 2340}
+      Script: {instanceID: 2310}
     - Class: 114
-      Script: {instanceID: 2442}
+      Script: {instanceID: 2412}
     - Class: 114
-      Script: {instanceID: 2474}
+      Script: {instanceID: 2444}
     - Class: 114
-      Script: {instanceID: 2594}
+      Script: {instanceID: 2564}
     - Class: 114
-      Script: {instanceID: 2776}
+      Script: {instanceID: 2746}
     - Class: 114
-      Script: {instanceID: 3102}
+      Script: {instanceID: 3072}
     - Class: 114
-      Script: {instanceID: 3474}
+      Script: {instanceID: 3444}
     - Class: 114
-      Script: {instanceID: 3736}
+      Script: {instanceID: 3706}
     - Class: 114
-      Script: {instanceID: 3880}
+      Script: {instanceID: 3850}
     - Class: 114
-      Script: {instanceID: 4102}
+      Script: {instanceID: 4072}
     - Class: 114
-      Script: {instanceID: 4196}
+      Script: {instanceID: 4166}
     - Class: 114
-      Script: {instanceID: 26850}
+      Script: {instanceID: 26684}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -124,23 +124,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1574}
+      Script: {instanceID: 1544}
     - Class: 114
-      Script: {instanceID: 2062}
+      Script: {instanceID: 2032}
     - Class: 114
-      Script: {instanceID: 2180}
+      Script: {instanceID: 2150}
     - Class: 114
-      Script: {instanceID: 2340}
+      Script: {instanceID: 2310}
     - Class: 114
-      Script: {instanceID: 2442}
+      Script: {instanceID: 2412}
     - Class: 114
-      Script: {instanceID: 2468}
+      Script: {instanceID: 2438}
     - Class: 114
-      Script: {instanceID: 2594}
+      Script: {instanceID: 2564}
     - Class: 114
-      Script: {instanceID: 2776}
+      Script: {instanceID: 2746}
     - Class: 114
-      Script: {instanceID: 2854}
+      Script: {instanceID: 2824}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -660,4 +660,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/manu.unity
   - Assets/Scenes/main.unity
-  playerPath: C:/Users/moolm/OneDrive/Pulpit/game saves/Tetris 3D.exe
+  playerPath: /home/leopoldkucinski/Dokumenty/Tetris3D/Tetris3D1.3/Tetris 3D.exe

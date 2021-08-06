@@ -181,6 +181,15 @@ public class blockGenerator : MonoBehaviour
 
     void Update()
     {
+      if(!score.endGame)
+      {
+        int i = 0;
+        foreach (GameObject obj in list_of_cubes)
+        {
+            i++;
+        }
+        score.scoreCount=i; 
+      }
         if (score.endGame && oneTime)
         {
             oneTime = false;
