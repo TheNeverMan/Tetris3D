@@ -9,6 +9,9 @@ public class box_control : MonoBehaviour
     KeyCode rotationRevKey = KeyCode.LeftShift;
     KeyCode downDashKey = KeyCode.Space;
 
+    float rotationXSensivity = 0.9f;
+    float rotationYSensivity = 0.9f;
+
     public float wsadSensivity = 10f;
 
     private bool canMove = true;
@@ -67,14 +70,11 @@ public class box_control : MonoBehaviour
 
                     if (Input.GetKey(rotationRevKey))
                     {
-                        euler.x -= 0.5f;
+                        euler.x -= rotationXSensivity;
                     }
-                    else //if (!Input.GetKey(rotationRevKey))
+                    else
                     {
-                        if (euler.x < 0)
-                            euler.x -= 0.5f;
-                        else
-                            euler.x += 0.5f;
+                        euler.x += rotationXSensivity;
                     }
                     Debug.Log(euler.x);
 
@@ -86,11 +86,11 @@ public class box_control : MonoBehaviour
 
                     if (Input.GetKey(rotationRevKey))
                     {
-                        euler.y -= 0.5f;
+                        euler.y -= rotationYSensivity;
                     }
-                    else //if (Input.GetKey(rotationRevKey))
+                    else
                     {
-                        euler.y += 0.5f;
+                        euler.y += rotationYSensivity;
                     }
                     transform.localRotation = Quaternion.Euler(euler);
                 }
