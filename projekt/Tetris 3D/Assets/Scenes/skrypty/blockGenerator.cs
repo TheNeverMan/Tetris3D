@@ -53,6 +53,12 @@ public class blockGenerator : MonoBehaviour
 
         GameObject block1 = GameObject.CreatePrimitive(PrimitiveType.Cube);
         block1.transform.position = startPos;
+        Rigidbody block1RigidBody = block1.AddComponent<Rigidbody>();
+        box_control BoxControl = block1.AddComponent<box_control>();
+        box_move BoxMove = block1.AddComponent<box_move>();
+
+        block1RigidBody.mass = 20;
+        block1RigidBody.drag = 3.0f;
         changeBlockColor(block1, blockColor);
 
         if (blocksNumber >= 2)
