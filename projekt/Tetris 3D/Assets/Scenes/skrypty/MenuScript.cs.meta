@@ -3,7 +3,13 @@ guid: a546d002f952b2949843424dba383d9a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - exi: {instanceID: 0}
+  - start: {instanceID: 0}
+  - hard: {instanceID: 0}
+  - ez: {instanceID: 0}
+  - back: {instanceID: 0}
+  - studnia: {fileID: 2669806257420885851, guid: 151219466f1ad764ba409a701760f24c, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

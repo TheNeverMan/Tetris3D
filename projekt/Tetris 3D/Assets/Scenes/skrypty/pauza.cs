@@ -14,7 +14,7 @@ public class pauza : MonoBehaviour
     */
     private void Update()
     {
-        Debug.Log(Pause);
+        // Debug.Log(Pause);
         if (Input.GetKeyDown(KeyCode.P))
         {
             if (!Pause)

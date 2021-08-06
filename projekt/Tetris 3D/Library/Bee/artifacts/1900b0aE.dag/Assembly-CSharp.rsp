@@ -327,6 +327,7 @@
 "Assets/Scenes/skrypty/pauza.cs"
 "Assets/Scenes/skrypty/score.cs"
 "Assets/Scenes/skrypty/score_text.cs"
+"Assets/Scenes/skrypty/StudniaScale.cs"
 -langversion:8.0
 
 /deterministic

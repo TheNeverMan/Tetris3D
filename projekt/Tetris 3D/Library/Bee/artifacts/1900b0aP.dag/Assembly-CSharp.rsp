@@ -281,6 +281,7 @@
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.TextMeshPro.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.Timeline.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/UnityEngine.UI.ref.dll"
+"Assets/Scenes/skrypty/audio.cs"
 "Assets/Scenes/skrypty/blockGenerator.cs"
 "Assets/Scenes/skrypty/box_control.cs"
 "Assets/Scenes/skrypty/box_move.cs"
