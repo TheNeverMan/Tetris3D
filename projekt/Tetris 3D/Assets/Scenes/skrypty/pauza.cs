@@ -7,18 +7,18 @@ using UnityEngine.SceneManagement;
 public class pauza : MonoBehaviour
 {
     public static bool Pause;
-    public GameObject t這;
+    public GameObject two;
     public GameObject ret;
     public GameObject esc;
     private void Awake()
-    {   
-        t這.SetActive(false);
+    {
+        two.SetActive(false);
         esc.SetActive(false);
         ret.SetActive(false);
     }
     private void Update()
     {
-       
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (!Pause)
@@ -26,14 +26,14 @@ public class pauza : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Confined;
                 Time.timeScale = 0;
                 Pause = true;
-                t這.SetActive(true);
+                two.SetActive(true);
                 esc.SetActive(true);
                 ret.SetActive(true);
             }
-            
+
 
         }
-        
+
     }
     public void Return()
     {
@@ -43,7 +43,7 @@ public class pauza : MonoBehaviour
             Time.timeScale = 1;
             Pause = false;
 
-            t這.SetActive(false);
+            two.SetActive(false);
             esc.SetActive(false);
             ret.SetActive(false);
         }

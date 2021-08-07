@@ -65,39 +65,43 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1606}
+      Script: {instanceID: 1644}
     - Class: 114
-      Script: {instanceID: 1874}
+      Script: {instanceID: 1764}
     - Class: 114
-      Script: {instanceID: 1974}
+      Script: {instanceID: 2032}
     - Class: 114
-      Script: {instanceID: 2252}
+      Script: {instanceID: 2132}
     - Class: 114
-      Script: {instanceID: 2354}
+      Script: {instanceID: 2410}
     - Class: 114
-      Script: {instanceID: 2386}
+      Script: {instanceID: 2512}
     - Class: 114
-      Script: {instanceID: 2506}
+      Script: {instanceID: 2544}
     - Class: 114
-      Script: {instanceID: 2688}
+      Script: {instanceID: 2664}
     - Class: 114
-      Script: {instanceID: 3014}
+      Script: {instanceID: 2846}
     - Class: 114
-      Script: {instanceID: 3068}
+      Script: {instanceID: 2924}
     - Class: 114
-      Script: {instanceID: 3386}
+      Script: {instanceID: 3172}
     - Class: 114
-      Script: {instanceID: 3502}
+      Script: {instanceID: 3226}
     - Class: 114
-      Script: {instanceID: 3650}
+      Script: {instanceID: 3544}
     - Class: 114
-      Script: {instanceID: 3794}
+      Script: {instanceID: 3660}
     - Class: 114
-      Script: {instanceID: 4016}
+      Script: {instanceID: 3808}
     - Class: 114
-      Script: {instanceID: 4110}
+      Script: {instanceID: 3952}
     - Class: 114
-      Script: {instanceID: 17934}
+      Script: {instanceID: 4174}
+    - Class: 114
+      Script: {instanceID: 4268}
+    - Class: 114
+      Script: {instanceID: 26908}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -107,6 +111,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -129,28 +135,32 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1486}
+      Script: {instanceID: 1644}
     - Class: 114
-      Script: {instanceID: 1974}
+      Script: {instanceID: 2132}
     - Class: 114
-      Script: {instanceID: 2092}
+      Script: {instanceID: 2250}
     - Class: 114
-      Script: {instanceID: 2252}
+      Script: {instanceID: 2410}
     - Class: 114
-      Script: {instanceID: 2354}
+      Script: {instanceID: 2512}
     - Class: 114
-      Script: {instanceID: 2380}
+      Script: {instanceID: 2538}
     - Class: 114
-      Script: {instanceID: 2506}
+      Script: {instanceID: 2664}
     - Class: 114
-      Script: {instanceID: 2688}
+      Script: {instanceID: 2846}
     - Class: 114
-      Script: {instanceID: 2766}
+      Script: {instanceID: 2924}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -644,7 +654,7 @@ ScriptsOnlyBuild:
     className: centrym
   - hash:
       serializedVersion: 2
-      Hash: bdfa05c533c6f2d2dda2f4c02e586fdc
+      Hash: 0663ea93c62a39138c5faa8e13b9f95c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: pauza
@@ -676,4 +686,5 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/manu.unity
   - Assets/Scenes/main.unity
-  playerPath: /home/leopoldkucinski/Dokumenty/Tetris3D1.4-Win10/Tetris 3D.exe
+  playerPath: /home/leopoldkucinski/Dokumenty/Tetris3D/Tetris3D/buildy/Tetris3D1.5-Win10/Tetris
+    3D.exe
