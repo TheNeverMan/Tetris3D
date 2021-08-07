@@ -2,38 +2,55 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class pauza : MonoBehaviour
 {
-    public bool Pause;
-    //public GameObject button;
-    /*private void Awake()
-    {
-        button.SetActive(false);
+    public static bool Pause;
+    public GameObject t這;
+    public GameObject ret;
+    public GameObject esc;
+    private void Awake()
+    {   
+        t這.SetActive(false);
+        esc.SetActive(false);
+        ret.SetActive(false);
     }
-    */
     private void Update()
     {
-        // Debug.Log(Pause);
-        if (Input.GetKeyDown(KeyCode.P))
+       
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (!Pause)
             {
                 Cursor.lockState = CursorLockMode.Confined;
                 Time.timeScale = 0;
                 Pause = true;
-                //button.SetActive(true);
+                t這.SetActive(true);
+                esc.SetActive(true);
+                ret.SetActive(true);
             }
-            else if (Pause)
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                Time.timeScale = 1;
-                Pause = false;
-                //button.SetActive(false);
-            }
+            
 
         }
+        
     }
+    public void Return()
+    {
+        if (Pause)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Time.timeScale = 1;
+            Pause = false;
 
+            t這.SetActive(false);
+            esc.SetActive(false);
+            ret.SetActive(false);
+        }
+    }
+    public void exit()
+    {
+        SceneManager.LoadScene(0);
+    }
 
 }
