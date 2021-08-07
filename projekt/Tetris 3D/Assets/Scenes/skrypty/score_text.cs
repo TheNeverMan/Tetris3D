@@ -13,10 +13,12 @@ public class score_text : MonoBehaviour // do UI
 
         if (score.endGame)
         {
-            scoreField.text = "YOU HAVE LOST SCORE: " + scoreCountInt;
+          scoreField.fontSize = 18;
+            scoreField.text = "YOU HAVE LOST (PRESS R TO RESTART) SCORE: " + scoreCountInt;
         }
         else
         {
+          scoreField.fontSize = 24;
             scoreField.text = "SCORE: " + scoreCountInt;
         }
     }

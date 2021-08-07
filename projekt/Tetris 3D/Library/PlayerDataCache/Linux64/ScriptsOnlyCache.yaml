@@ -95,7 +95,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4104}
     - Class: 114
-      Script: {instanceID: 18196}
+      Script: {instanceID: 18188}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -680,4 +680,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/manu.unity
   - Assets/Scenes/main.unity
-  playerPath: /home/leopoldkucinski/Dokumenty/Tetris3D/Tetris3d 1.4.1-Linux.x86_64
+  playerPath: /home/leopoldkucinski/Dokumenty/Tetris3D/Tetris3D/buildy/Tetris3d 1.4.1-Linux.x86_64
